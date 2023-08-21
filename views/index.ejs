@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <link rel="stylesheet" href="../stylesheets/style.css">
+  <link href="https://cdn.jsdelivr.net/npm/remixicon@2.5.0/fonts/remixicon.css" rel="stylesheet">
+</head>
+
+<body>
+  <div id="main">
+    <div id="left">
+      <h3>VSCode-Visual Studio Code</h3>
+      <hr>
+      <div class="flleft">
+        <h5>
+          <%= fname %>
+        </h5>
+        <div id="iconfl">
+          <i id="fileicon" class="ri-file-add-line"></i>
+          <i id="foldericon" class="ri-folder-add-line"></i>
+          <a href="/close"><i class="ri-refresh-line"></i></a>
+        </div>
+
+      </div>
+      <form action="/create">
+        <input style="display:none;" type="text" placeholder="Enter your file name" name="filename" id="filetxt">
+      </form>
+      <form action="/createfolder">
+        <input style="display:none;" type="text" placeholder="Enter your folder name" name="foldername" id="foldertxt">
+      </form>
+      <div id="files">
+        <% files.forEach(function(val){ %>
+          <div class="morefile">
+            <div class="filename">
+              <% if(val.isfolder){ %>
+                <i class="ri-arrow-right-s-line"></i>
+               <% }else{ %>
+                <i class="ri-file-code-line"></i>
+               <% } %>
+              <h5>
+               <a href="/file/<%= val.name %>" ><%= val.name %></a>
+              </h5>
+            </div>
+            
+            <div class="icondlt">
+              <a href="/rename/<%= val.name %>"><i class="ri-pencil-line"></i></a>
+              <a href="/delete/<%= val.name %>/<%= val.isfolder ? 1 : 0 %>"> <i class="ri-delete-bin-line"></i></a>
+
+              <!-- condition ? if true jo print hoga : false hoga to ye print hoga -->
+            </div>
+          </div>
+          <% }) %>
+
+      </div>
+
+
+    </div>
+    <div id="right">
+      <div id="nav">
+        <div class="cross">
+          <h5>Getting started</h5>
+          <i class="ri-close-line"></i>
+        </div>
+    
+
+      </div>
+      <div id="bottom">
+        <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/9/9a/Visual_Studio_Code_1.35_icon.svg/2048px-Visual_Studio_Code_1.35_icon.svg.png" alt="">
+      </div>
+    </div>
+  </div>
+
+
+
+  <script>
+
+function turningoff(){
+  document.querySelector("#filetxt").style.display="none";
+  document.querySelector("#foldertxt").style.display="none";
+  
+}
+    document.querySelector("#fileicon").addEventListener("click",function(){
+turningoff()
+      document.querySelector("#filetxt").style.display="block"
+
+    })
+    document.querySelector("#foldericon").addEventListener("click",function(){
+turningoff()
+      document.querySelector("#foldertxt").style.display="block"
+    })
+
+  </script>
+</body>
+
+</html>

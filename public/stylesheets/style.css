@@ -1,0 +1,151 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: gilroy;
+}
+html,body{
+    width: 100%;
+    height: 100%;
+}
+#main{
+  width: 100%;
+  height: 100%;
+  display: flex;
+}
+a{
+  text-decoration: none;
+  color: #ffff;
+  font-family: gilroy;
+  font-size: 15px;
+ 
+}
+#left{
+  width: 20%;
+  height: 100%;
+  background-color: #252526;
+  padding: 20px;
+  color: #ffff;
+
+
+}
+#left input{
+  /* width: 200px;
+  height: 40px; */
+  padding: 5px 10px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 12px;
+
+}
+#left h3{
+  color:#fff;
+  text-align: center;
+
+}
+#left hr{
+  margin: 10px;
+  opacity: 0.6;
+}
+#left .flleft{
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+#left .flleft h5{
+  font-weight: 800;
+  text-transform: capitalize;
+}
+#left #iconfl{
+  display: flex;
+  gap: 15px;
+  cursor: pointer;
+
+}
+#left  #files {
+  padding: 20px;
+}
+#left  #files .morefile{
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 10px;
+}
+#left  #files .morefile h5{
+  font-weight: 500;
+}
+#left  #files .morefile .filename{
+  gap: 10px;
+  display: flex;
+  align-items: center;
+}
+#left  #files .morefile .icondlt{
+  display: none;
+}
+
+#left  #files .morefile .icondlt i{
+  cursor: pointer;
+  margin-left: 1vw;
+
+}
+
+#left  #files .morefile:hover .icondlt{
+  display: flex;
+  
+}
+
+#right{
+  width: 80%;
+  height: 100%;
+  background-color: #1e1e1e;
+}
+#right #nav{
+  width: 100%;
+  height: 7vh;
+  background-color: #252526;
+  display: flex;
+  gap: 20px;
+}
+#right #nav .cross{
+  width: fit-content;
+  color: #ffff;
+  display: flex;
+  gap: 5px;
+  background-color: #2d2d2d;
+  height: 100%;
+  padding: 20px;
+
+}
+#right #nav .cross h5{
+  font-weight: 500;
+}
+
+#right #bottom{
+  width: 100%;
+  height: 92vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+#right #bottom img{
+  height: 30%;
+  filter: grayscale(100%) brightness(30%);
+}
+#right #bottom textarea{
+  width: 100%;
+  height: 100%;
+  background-color: #ffff;
+  border: none;
+  font-size: 1.5vw;
+  font-family: gilroy;
+  background-color: #1e1e1e;
+  color: #ffff;
+  padding: 1vw 2vw;
+  outline: none;
+  text-transform: capitalize;
+}
+
+
+
